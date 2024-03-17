@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">LoLNews</string>
+    <string name="buttonMainPatch">Last Patch</string>
+    <string name="buttonMainChamp">Last Champ</string>
+    <string name="buttonMainChampRotation">Rotation</string>
+    <string name="buttonMainAllPatch">All Patches</string>
+    <string name="buttonMainAllChampNews">All Champs</string>
+    <string name="buttonMainAllESportsNews">E-Sports</string>
+    <string name="buttonMainAllNews">All News</string>
+
+    <!-- Strings related to Settings -->
+    <string name="settingsServer">Language</string>
+    <string name="settingsLanguage">Language</string>
+    <string name="settingsNotifications">Notifications</string>
+    <string name="settingsOnlyPatch">New patch</string>
+    <string name="settingsOnlyChamp">New champ</string>
+    <string name="settingsOnlyRotation">New champ rotation</string>
+    <string name="settingsAll">All news</string>
+    <string name="settingsMessageNotification1">-In some phones you have to manually allow the app to start on boot, if not, you have to open it yourself.</string>
+    <string name="settingsMessageNotification2">-If you force stop the proces, it will...</string>
+    <string name="settingsMessagePermission">If you dont allow the app to access your account, you can not get the notifications!</string>
+    <string name="settingsPermissionForceClose">Keep in mind, if you force close this app, it will stop sending you the notifications</string>
+    <string name="settingsMessagePermissionButton">Allow</string>
+    <string name="settingsMessagePermissionTittle">Permission</string>
+
+    <string name="policyMessage">LoL News isn’t endorsed by Riot Games and doesn’t reflect the views or opinions of Riot Games or anyone officially involved in producing or managing League of Legends. League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc. League of Legends © Riot Games, Inc.</string>
+    <string name="buttonMainAllDevNews">Dev</string>
+    <string name="buttonMainAllLoreNews">Lore</string>
+    <string name="buttonMainAllMediaNews">Media</string>
+    <string name="buttonMainAllMerchNews">Merch</string>
+    <string name="buttonMainAllCommunityNews">Community</string>
+    <string name="buttonMainAllRiotGamesNews">RiotGames</string>
+
+</resources>

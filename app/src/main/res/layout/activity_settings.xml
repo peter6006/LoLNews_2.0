@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlack"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/toplane2"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/linearLayout3"
+        android:layout_below="@id/linearLayout1"
+        android:background="@drawable/midlelane2"
+        android:visibility="gone"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearLayout1"
+        android:background="@drawable/botlane"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/greyBackground"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="1dp"
+            android:background="@drawable/border"
+            android:orientation="vertical"
+            android:paddingBottom="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/title">
+
+                <TextView
+                    android:id="@+id/servLangtv"
+                    style="@style/TextSettings"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:fontFamily="@font/timeless_bold"
+                    android:gravity="center_vertical"
+                    android:text="@string/settingsServer" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/backgroundSettings"
+                android:orientation="horizontal"
+                android:paddingBottom="15dp">
+
+                <LinearLayout
+                    android:id="@+id/layoutServer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <Spinner
+                        android:id="@+id/serverSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/layoutServer"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <Spinner
+                        android:id="@+id/languageSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/border"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/backgroundSettings"
+                    android:paddingBottom="15dp">
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        style="@style/TextSettings"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/title"
+                        android:fontFamily="@font/timeless_bold"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="@string/settingsNotifications"
+                        android:textColor="@color/colorTitle" />
+
+                    <TextView
+                        android:id="@+id/textViewSwitch1"
+                        style="@style/TextSettingsSecondary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textView3"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/timeless"
+                        android:text="@string/settingsOnlyPatch" />
+
+                    <com.kyleduo.switchbutton.SwitchButton
+                        android:id="@+id/switch1"
+                        style="@style/TextSettingsSecondary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textView3"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="35dp"
+                        android:fontFamily="@font/timeless"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16dp"
+                        app:kswTextOff="NO"
+                        app:kswTextOn="YES" />
+
+                    <TextView
+                        android:id="@+id/textViewSwitch2"
+                        style="@style/TextSettingsSecondary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textViewSwitch1"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/timeless"
+                        android:text="@string/settingsOnlyChamp" />
+
+                    <com.kyleduo.switchbutton.SwitchButton
+                        android:id="@+id/switch2"
+                        style="@style/TextSettingsSecondary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textViewSwitch1"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="35dp"
+                        android:fontFamily="@font/timeless"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16dp"
+                        app:kswTextOff="NO"
+                        app:kswTextOn="YES" />
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/textViewSwitch3"-->
+                    <!--style="@style/TextSettingsSecondary"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_below="@+id/textViewSwitch2"-->
+                    <!--android:layout_marginLeft="15dp"-->
+                    <!--android:layout_marginTop="20dp"-->
+                    <!--android:fontFamily="@font/timeless"-->
+                    <!--android:text="@string/settingsOnlyRotation" />-->
+
+                    <!--<com.kyleduo.switchbutton.SwitchButton-->
+                    <!--android:id="@+id/switch3"-->
+                    <!--style="@style/TextSettingsSecondary"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignParentEnd="true"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:layout_below="@+id/textViewSwitch2"-->
+                    <!--android:layout_marginRight="35dp"-->
+                    <!--android:layout_marginTop="20dp"-->
+                    <!--android:fontFamily="@font/timeless"-->
+                    <!--android:textColor="#FFFFFF"-->
+                    <!--android:textSize="16dp"-->
+                    <!--app:kswTextOff="NO"-->
+                    <!--app:kswTextOn="YES" />-->
+
+                    <TextView
+                        android:id="@+id/textViewSwitch4"
+                        style="@style/TextSettingsSecondary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textViewSwitch2"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/timeless"
+                        android:text="@string/settingsAll" />
+
+                    <com.kyleduo.switchbutton.SwitchButton
+                        android:id="@+id/switch4"
+                        style="@style/TextSettingsSecondary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textViewSwitch2"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="35dp"
+                        android:fontFamily="@font/timeless"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16dp"
+                        app:kswTextOff="NO"
+                        app:kswTextOn="YES" />
+
+
+                    <TextView
+                        android:id="@+id/tvNoPermissionNotification"
+                        style="@style/TextSettingsSecondary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textView3"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="15dp"
+                        android:fontFamily="@font/timeless"
+                        android:text="@string/settingsMessagePermission"
+                        android:textColor="@color/switchColor"
+                        android:visibility="gone" />
+
+                    <Button
+                        android:id="@+id/buttonPermission"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:layout_below="@id/tvNoPermissionNotification"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/button"
+                        android:fontFamily="@font/timeless_bold"
+                        android:text="@string/settingsMessagePermissionButton"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="15dp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvNotificationForceClose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mainLayout"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/timeless"
+        android:gravity="bottom"
+        android:text="@string/settingsPermissionForceClose"
+        android:textColor="@color/colorWhite"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+
+</RelativeLayout>
